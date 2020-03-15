@@ -1,26 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FirstComponent, { SecondComponent } from './components/learning/FirstComponent'
+//defaultot importálhatod, de a többit csak {}-val
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return ( //jsx 
+      <div className="App">  
+        My Heloo world
+        <FirstComponent></FirstComponent>
+        <SecondComponent></SecondComponent>
+        <ThirdComponent></ThirdComponent>
+      </div>
+    );
+  }
 }
+
+
+function ThirdComponent() {
+    return (
+      <div className="thirdComponent">  
+        Third Component
+      </div>
+    );
+}
+
 
 export default App;
