@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import FirstComponent, { SecondComponent } from './components/learning/FirstComponent'
+import FirstComponent from './components/learning/FirstComponent'
+import SecondComponent from './components/learning/SecondComponent'
+import ThirdComponent from './components/learning/ThirdComponent'
 //defaultot importálhatod, de a többit csak {}-val
+import CounterButton, {Counter} from './components/counter/Counter'
+
+
 
 class App extends Component {
   render() {
     return ( //jsx 
-      <div className="App">  
+      <div className="App"> 
+        <Counter></Counter>
+      </div>
+    );
+  }
+}
+
+
+class LearningComponent extends Component {
+  render() {
+    return ( //jsx 
+      <div className="LearningComponents">  
         My Heloo world
         <FirstComponent></FirstComponent>
         <SecondComponent></SecondComponent>
@@ -16,15 +32,5 @@ class App extends Component {
     );
   }
 }
-
-
-function ThirdComponent() {
-    return (
-      <div className="thirdComponent">  
-        Third Component
-      </div>
-    );
-}
-
 
 export default App;
